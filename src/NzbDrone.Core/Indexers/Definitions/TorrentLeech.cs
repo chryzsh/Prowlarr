@@ -89,7 +89,8 @@ namespace NzbDrone.Core.Indexers.Definitions
             {
                 TvSearchParams = new List<TvSearchParam>
                                    {
-                                       TvSearchParam.Q, TvSearchParam.Season, TvSearchParam.Ep, TvSearchParam.ImdbId
+                       // removed TvSearchParam.ImdbId because torrentleech is not tagging all releases with imdbId which leads to missing results.
+                                       TvSearchParam.Q, TvSearchParam.Season, TvSearchParam.Ep//, TvSearchParam.ImdbId
                                    },
                 MovieSearchParams = new List<MovieSearchParam>
                                    {
