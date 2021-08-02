@@ -154,7 +154,7 @@ namespace NzbDrone.Core.Indexers.Definitions
                             }
                             else
                             {
-                                // SC API currently doesn't return anything but title.
+                                // SC API currently doesn't return anything but title for music so this is redundant
                                 release.Title = $"{result.Artist} - {result.GroupName} ({result.GroupYear}) [{torrent.Format} {torrent.Encoding}] [{torrent.Media}]";
                             }
 
