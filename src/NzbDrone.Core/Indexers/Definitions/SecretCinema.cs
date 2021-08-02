@@ -325,7 +325,7 @@ namespace NzbDrone.Core.Indexers.Definitions
                             if (IsAnyMovieCategory(release.Categories))
                             {
                                 // Remove director from title
-                                // SC API returns no more useful information than this
+                                // SC API returns no more useful information than this. in the future Media might give more detail
                                 release.Title = $"{result.GroupName} ({result.GroupYear}) {torrent.Media}";
 
                                 // Replace media formats with standards
@@ -334,7 +334,7 @@ namespace NzbDrone.Core.Indexers.Definitions
                             }
                             else
                             {
-                                // SC API currently doesn't return anything but title.
+                                // SC API currently doesn't return anything but title, so this is redundant
                                 release.Title = $"{result.Artist} - {result.GroupName} ({result.GroupYear}) [{torrent.Format} {torrent.Encoding}] [{torrent.Media}]";
                             }
 
