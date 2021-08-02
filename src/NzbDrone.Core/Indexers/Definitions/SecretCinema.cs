@@ -324,8 +324,8 @@ namespace NzbDrone.Core.Indexers.Definitions
 
                         if (IsAnyMovieCategory(release.Categories))
                         {
-                            // Remove director from title
-                            // SC API returns no more useful information than this. in the future Media might give more detail
+                            // Also, remove director from title
+                            // SC API returns no more useful information than this for movies. in the future Media might give more detail
                             release.Title = $"{result.GroupName} ({result.GroupYear}) {torrent.Media}";
 
                             // Replace media formats with standards
